@@ -6,7 +6,7 @@
 /*   By: macbookpro <macbookpro@student.codam.nl      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/24 22:46:35 by macbookpro     #+#    #+#                */
-/*   Updated: 2019/11/25 00:01:09 by macbookpro    ########   odam.nl         */
+/*   Updated: 2019/11/26 01:02:44 by macbookpro    ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,10 @@ typedef struct		s_check
 t_check				init_check(t_check chk_frmt);
 t_check     		search_varg(t_check chk_frmt, const char *format, va_list ap);
 int					print_varg(t_check chk_frmt, va_list ap);
+t_check				search_flags(t_check chk_frmt, const char *format);
+t_check     		search_fwidth(t_check chk_frmt, const char *format);
+int     			is_flag(char c);
+int					is_prec(char c);
+int					is_conv(char c);
 
 #endif

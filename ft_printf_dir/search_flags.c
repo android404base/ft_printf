@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   init_check.c                                       :+:    :+:            */
+/*   search_flags.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: macbookpro <macbookpro@student.codam.nl      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/24 23:54:19 by macbookpro     #+#    #+#                */
-/*   Updated: 2019/11/26 00:54:24 by macbookpro    ########   odam.nl         */
+/*   Created: 2019/11/26 00:37:49 by macbookpro     #+#    #+#                */
+/*   Updated: 2019/11/26 00:53:38 by macbookpro    ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_check		init_check(t_check chk_frmt)
+t_check     search_flags(t_check chk_frmt, const char *format)
 {
-	//OPT_START_1_2
-	chk_frmt.flag_zero = 0;
-	chk_frmt.flag_minus = 0;
-	chk_frmt.field_width = -1;
-	chk_frmt.precs = -1;
-	chk_frmt.conv_spc = '\0';
-	return (chk_frmt);
+    const char *tmp;
+
+    tmp = format;
+    while (*tmp && !is_conv(*tmp) && (!ft_isdigit(*tmp) || *tmp == '0'))
+    {
+        if (is_flag(*tmp))
+        {
+            if (*tmp == '-')
+                chk_frmt.flag_minus = 1;
+            else
+                chk_frmt.flag_zero = 1;
+        }
+        tmp++;
+    }
+    return (chk_frmt);
 }
