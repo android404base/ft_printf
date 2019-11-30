@@ -6,13 +6,13 @@
 /*   By: macbookpro <macbookpro@student.codam.nl      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/24 22:45:37 by macbookpro     #+#    #+#                */
-/*   Updated: 2019/11/24 23:53:19 by macbookpro    ########   odam.nl         */
+/*   Updated: 2019/11/30 18:22:52 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int		ft_printf(const char * format, ...)
+#include <stdio.h>
+int		ft_printf(const char *format, ...)
 {
 	va_list		ap;
 	int			len;
@@ -24,7 +24,6 @@ int		ft_printf(const char * format, ...)
 	{
 		if (*format == '%')
 		{
-			//OPT_START_1
 			format++;
 			chk_frmt = init_check(chk_frmt);
 			chk_frmt = search_varg(chk_frmt, &format, ap);
@@ -32,7 +31,6 @@ int		ft_printf(const char * format, ...)
 		}
 		else
 		{
-			//OPT_START_2
 			ft_putchar(*format);
 			len++;
 			format++;

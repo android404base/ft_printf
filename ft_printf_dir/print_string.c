@@ -6,13 +6,13 @@
 /*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/30 12:32:15 by ydag           #+#    #+#                */
-/*   Updated: 2019/11/30 12:50:44 by ydag          ########   odam.nl         */
+/*   Updated: 2019/11/30 18:13:04 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void		front_padding(t_check chk_frmt, int str_len)
+static void		front_padding_st(t_check chk_frmt, int str_len)
 {
 	if (!chk_frmt.flag_zero && (!chk_frmt.flag_zero || \
 		!(chk_frmt.precs == -1 || chk_frmt.precs == 0)))
@@ -29,10 +29,10 @@ int				print_string(t_check chk_frmt, char *str)
 		str_len = ft_strlen(str);
 	else
 		return (print_string(chk_frmt, "(null)"));
-	if (chk_frmt.precs && chk_frmt.precs < str_len)
+	if (chk_frmt.precs != -1 && chk_frmt.precs < str_len)
 		str_len = chk_frmt.precs;
-	front_padding(chk_frmt, str_len);
-	if (!chk_frmt.precs)
+	front_padding_st(chk_frmt, str_len);
+	if (chk_frmt.precs == -1)
 		ft_putstr(str);
 	else
 		ft_putnstr(str, chk_frmt.precs);

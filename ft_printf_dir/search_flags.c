@@ -6,17 +6,17 @@
 /*   By: macbookpro <macbookpro@student.codam.nl      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/26 00:37:49 by macbookpro     #+#    #+#                */
-/*   Updated: 2019/11/26 18:25:03 by ydag          ########   odam.nl         */
+/*   Updated: 2019/11/30 16:34:34 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_check		search_flags(t_check chk_frmt, const char *format)
+t_check		search_flags(t_check chk_frmt, const char **format)
 {
 	const char *tmp;
 
-	tmp = format;
+	tmp = *format;
 	while (*tmp && !is_conv(*tmp) && (!ft_isdigit(*tmp) || *tmp == '0'))
 	{
 		if (is_flag(*tmp))

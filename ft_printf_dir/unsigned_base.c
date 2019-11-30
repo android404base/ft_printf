@@ -6,7 +6,7 @@
 /*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/30 14:10:39 by ydag           #+#    #+#                */
-/*   Updated: 2019/11/30 14:18:29 by ydag          ########   odam.nl         */
+/*   Updated: 2019/11/30 16:48:16 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ void	unsigned_base(int n, int base, int up)
 			unsigned_base((n / base) * -1, base, up);
 		ft_putchar(ptr[(-(n % base))]);
 	}
-	num = n;
+	num = (unsigned int)n;
 	if ((n >= 0 && base == 10) || base != 10)
 	{
-		if (num > (base - 1))
+		if (num > (unsigned int)(base - 1))
 			unsigned_base(num / base, base, up);
 		ft_putchar(ptr[(num % base)]);
 	}

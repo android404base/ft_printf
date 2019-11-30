@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   is_flag.c                                          :+:    :+:            */
+/*   ft_putlong.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: macbookpro <macbookpro@student.codam.nl      +#+                     */
+/*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/26 00:06:18 by macbookpro     #+#    #+#                */
-/*   Updated: 2019/11/30 16:24:32 by ydag          ########   odam.nl         */
+/*   Created: 2019/11/30 16:18:27 by ydag           #+#    #+#                */
+/*   Updated: 2019/11/30 16:18:42 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int		is_flag(char c)
+void	ft_putlong(long long n)
 {
-	if (c == '0' || c == '-')
-		return (1);
-	return (0);
+	if (n < 0)
+	{
+		if (n < -9)
+			ft_putlong((n / 10) * -1);
+		ft_putchar(-(n % 10) + '0');
+	}
+	else
+	{
+		if (n > 9)
+			ft_putlong(n / 10);
+		ft_putchar((n % 10) + '0');
+	}
 }

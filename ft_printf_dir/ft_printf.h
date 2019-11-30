@@ -6,7 +6,7 @@
 /*   By: macbookpro <macbookpro@student.codam.nl      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/24 22:46:35 by macbookpro     #+#    #+#                */
-/*   Updated: 2019/11/26 23:40:36 by macbookpro    ########   odam.nl         */
+/*   Updated: 2019/11/30 16:38:32 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,35 @@ typedef struct		s_check
 }					t_check;
 
 t_check				init_check(t_check chk_frmt);
-t_check				search_varg(t_check chk_frmt, const char *format, va_list ap);
-t_check				search_flags(t_check chk_frmt, const char *format);
-t_check				search_fwidth(t_check chk_frmt, const char *format, va_list ap);
-t_check				search_prec(t_check chk_frmt, const char *format, va_list ap);
-t_check				search_conv(t_check chk_frmt, const char *format);
+t_check				search_varg(t_check chk_frmt,
+							const char **format, va_list ap);
+t_check				search_flags(t_check chk_frmt, const char **format);
+t_check				search_fwidth(t_check chk_frmt,
+							const char **format, va_list ap);
+t_check				search_prec(t_check chk_frmt,
+							const char **format, va_list ap);
+t_check				search_conv(t_check chk_frmt, const char **format);
 int					print_varg(t_check chk_frmt, va_list ap);
 int					is_flag(char c);
 int					is_prec(char c);
 int					is_conv(char c);
+int					is_char(t_check chk);
+int					is_signed(t_check chk_frmt);
+int					is_string(t_check chk_frmt);
+int					is_unsigned(t_check chk_frmt);
+int					is_void(t_check chk_frmt);
+int					len_of_chars(t_check chk_frmt, int num);
+int					len_of_uchars(t_check chk, unsigned int num);
+int					print_char(t_check chk_frmt, unsigned int c);
+int					print_padding(char c, int size);
+int					print_signed(t_check chk_frmt, int num);
+int					print_string(t_check chk_frmt, char *str);
+int					print_unsigned(t_check chk_frmt, unsigned int num);
+int					unsigned_len(unsigned int num, int base);
+int					find_base(t_check chk_frmt);
+int					find_case(t_check chk_frmt);
+void				unsigned_base(int n, int base, int up);
+void				back_padding(t_check chk_frmt, int len);
+void				front_padding(t_check chk_frmt, int num, int len);
 
 #endif

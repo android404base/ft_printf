@@ -6,13 +6,13 @@
 /*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/30 11:52:35 by ydag           #+#    #+#                */
-/*   Updated: 2019/11/30 12:02:12 by ydag          ########   odam.nl         */
+/*   Updated: 2019/11/30 16:39:03 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	front_padding(t_check chk_frmt)
+static void	front_padding_st(t_check chk_frmt)
 {
 	if (!chk_frmt.flag_minus)
 	{
@@ -27,7 +27,7 @@ int			print_char(t_check chk_frmt, unsigned int c)
 {
 	int res;
 
-	front_padding(chk_frmt);
+	front_padding_st(chk_frmt);
 	if (chk_frmt.conv_spc == 'c')
 		res = ft_putchar(c);
 	else if (chk_frmt.conv_spc == '%')

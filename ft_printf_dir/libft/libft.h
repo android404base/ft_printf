@@ -6,7 +6,7 @@
 /*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 16:14:37 by ydag           #+#    #+#                */
-/*   Updated: 2019/11/23 12:58:02 by macbookpro    ########   odam.nl         */
+/*   Updated: 2019/11/30 16:20:59 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,9 @@ void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 							void (*del)(void *));
+int				ft_putchar(int c);
+void			ft_putlong(long long n);
+void			ft_putnstr(char const *s, size_t len);
+void			ft_putstr(char const *s);
 
 #endif

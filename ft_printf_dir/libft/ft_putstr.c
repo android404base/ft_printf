@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   is_flag.c                                          :+:    :+:            */
+/*   ft_putstr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: macbookpro <macbookpro@student.codam.nl      +#+                     */
+/*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/26 00:06:18 by macbookpro     #+#    #+#                */
-/*   Updated: 2019/11/30 16:24:32 by ydag          ########   odam.nl         */
+/*   Created: 2019/11/30 16:16:49 by ydag           #+#    #+#                */
+/*   Updated: 2019/11/30 16:21:02 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int		is_flag(char c)
+void	ft_putstr(char const *s)
 {
-	if (c == '0' || c == '-')
-		return (1);
-	return (0);
+	int i;
+
+	i = 0;
+	if (s == NULL)
+		return ;
+	while (s[i] != '\0')
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
 }

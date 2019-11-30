@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   is_flag.c                                          :+:    :+:            */
+/*   ft_putchar.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: macbookpro <macbookpro@student.codam.nl      +#+                     */
+/*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/26 00:06:18 by macbookpro     #+#    #+#                */
-/*   Updated: 2019/11/30 16:24:32 by ydag          ########   odam.nl         */
+/*   Created: 2019/11/30 16:18:58 by ydag           #+#    #+#                */
+/*   Updated: 2019/11/30 16:19:17 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int		is_flag(char c)
+int		ft_putchar(int c)
 {
-	if (c == '0' || c == '-')
-		return (1);
-	return (0);
+	char ca;
+
+	ca = (char)c;
+	write(1, &ca, 1);
+	return (1);
 }
