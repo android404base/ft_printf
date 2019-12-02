@@ -6,7 +6,7 @@
 /*   By: macbookpro <macbookpro@student.codam.nl      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/24 22:46:35 by macbookpro     #+#    #+#                */
-/*   Updated: 2019/12/01 11:29:59 by ydag          ########   odam.nl         */
+/*   Updated: 2019/12/02 14:32:49 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,8 @@ int					print_unsigned(t_check chk_frmt, unsigned int num);
 int					unsigned_len(unsigned int num, int base);
 int					find_base(t_check chk_frmt);
 int					find_case(t_check chk_frmt);
-void				unsigned_base(int n, int base, int up);
+void				unsigned_base(unsigned int n, int base, int up);
+void				u_front_padding(t_check chk_frmt, int num, int len, int op);
 void				back_padding(t_check chk_frmt, int len);
 void				front_padding(t_check chk_frmt, int num, int len);
 

@@ -6,7 +6,7 @@
 /*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/30 12:51:37 by ydag           #+#    #+#                */
-/*   Updated: 2019/12/01 11:51:29 by ydag          ########   odam.nl         */
+/*   Updated: 2019/12/02 16:30:22 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int				print_unsigned(t_check chk_frmt, unsigned int num)
 	chk_frmt = arrange_precs(chk_frmt, num, len);
 	if (chk_frmt.precs > len)
 		len = chk_frmt.precs;
-	front_padding(chk_frmt, num, len);
+	u_front_padding(chk_frmt, num, len, oldprec);
 	if (!chk_frmt.flag_minus && chk_frmt.precs != -1)
 		print_padding('0', (chk_frmt.precs - \
 						unsigned_len(num, find_base(chk_frmt))));

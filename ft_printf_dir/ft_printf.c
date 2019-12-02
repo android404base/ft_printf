@@ -6,7 +6,7 @@
 /*   By: macbookpro <macbookpro@student.codam.nl      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/24 22:45:37 by macbookpro     #+#    #+#                */
-/*   Updated: 2019/12/01 12:07:32 by ydag          ########   odam.nl         */
+/*   Updated: 2019/12/02 16:27:45 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ int		ft_printf(const char *format, ...)
 		else
 		{
 			ft_putchar(*format);
-			len++;
 			format++;
+			len++;
 		}
 	}
 	va_end(ap);

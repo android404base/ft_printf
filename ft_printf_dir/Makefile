@@ -6,14 +6,14 @@
 #    By: ydag <ydag@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/11/30 14:28:29 by ydag           #+#    #+#                 #
-#    Updated: 2019/11/30 17:42:31 by ydag          ########   odam.nl          #
+#    Updated: 2019/12/02 13:16:31 by ydag          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =		libftprintf.a
 
 SRCS =		back_padding.c  find_base.c \
-			find_case.c front_padding.c \
+			find_case.c front_padding.c u_front_padding.c \
 			ft_printf.c init_check.c is_char.c \
 			is_conv.c is_flag.c is_prec.c \
 			is_signed.c is_string.c is_unsigned.c \
@@ -26,7 +26,7 @@ SRCS =		back_padding.c  find_base.c \
 			libft/ft_putchar.c libft/ft_putlong.c libft/ft_putnstr.c \
 			libft/ft_isspace.c libft/ft_isupper.c libft/ft_itoa.c \
 			libft/ft_isalpha.c libft/ft_isdigit.c libft/ft_islower.c \
-			libft/ft_atoi.c
+			libft/ft_atoi.c 
 
 OUT =		$(SRCS:%.c=%.o)
 

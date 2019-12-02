@@ -6,34 +6,23 @@
 /*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/30 14:10:39 by ydag           #+#    #+#                */
-/*   Updated: 2019/12/01 11:37:01 by ydag          ########   odam.nl         */
+/*   Updated: 2019/12/02 13:04:16 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	unsigned_base(int n, int base, int up)
+void	unsigned_base(unsigned int n, int base, int up)
 {
 	const char			upc[] = "0123456789ABCDEF";
 	const char			low[] = "0123456789abcdef";
 	const char			*ptr;
-	unsigned int		num;
 
 	if (up)
 		ptr = upc;
 	else
 		ptr = low;
-	if (n < 0 && base == 10)
-	{
-		if (n < -(base - 1))
-			unsigned_base((n / base) * -1, base, up);
-		ft_putchar(ptr[(-(n % base))]);
-	}
-	num = (unsigned int)n;
-	if ((n >= 0 && base == 10) || base != 10)
-	{
-		if (num > (unsigned int)(base - 1))
-			unsigned_base(num / base, base, up);
-		ft_putchar(ptr[(num % base)]);
-	}
+	if (n > (unsigned int)(base - 1))
+		unsigned_base(n / base, base, up);
+	ft_putchar(ptr[(n % base)]);
 }
