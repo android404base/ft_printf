@@ -6,12 +6,12 @@
 /*   By: macbookpro <macbookpro@student.codam.nl      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/24 22:45:37 by macbookpro     #+#    #+#                */
-/*   Updated: 2019/11/30 18:22:52 by ydag          ########   odam.nl         */
+/*   Updated: 2019/12/01 12:07:32 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
+
 int		ft_printf(const char *format, ...)
 {
 	va_list		ap;

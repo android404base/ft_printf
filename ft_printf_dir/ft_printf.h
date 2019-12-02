@@ -6,7 +6,7 @@
 /*   By: macbookpro <macbookpro@student.codam.nl      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/24 22:46:35 by macbookpro     #+#    #+#                */
-/*   Updated: 2019/11/30 16:38:32 by ydag          ########   odam.nl         */
+/*   Updated: 2019/12/01 11:29:59 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct		s_check
 	char			conv_spc;
 }					t_check;
 
+int					ft_printf(const char *format, ...);
 t_check				init_check(t_check chk_frmt);
 t_check				search_varg(t_check chk_frmt,
 							const char **format, va_list ap);

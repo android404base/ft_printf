@@ -6,7 +6,7 @@
 /*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/30 12:51:37 by ydag           #+#    #+#                */
-/*   Updated: 2019/11/30 16:38:07 by ydag          ########   odam.nl         */
+/*   Updated: 2019/12/01 11:51:29 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static t_check	arrange_precs(t_check chk_frmt, unsigned int n, int len)
 	{
 		if (n == 0)
 			len--;
-		chk_frmt.precs = len + 1;
+		chk_frmt.precs = len;
 	}
 	return (chk_frmt);
 }
