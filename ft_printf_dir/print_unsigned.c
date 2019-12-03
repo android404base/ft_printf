@@ -6,22 +6,11 @@
 /*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/30 12:51:37 by ydag           #+#    #+#                */
-/*   Updated: 2019/12/02 16:30:22 by ydag          ########   odam.nl         */
+/*   Updated: 2019/12/03 11:06:42 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-static t_check	arrange_precs(t_check chk_frmt, unsigned int n, int len)
-{
-	if (chk_frmt.precs < (len + 1))
-	{
-		if (n == 0)
-			len--;
-		chk_frmt.precs = len;
-	}
-	return (chk_frmt);
-}
 
 int				print_unsigned(t_check chk_frmt, unsigned int num)
 {
@@ -30,7 +19,6 @@ int				print_unsigned(t_check chk_frmt, unsigned int num)
 
 	len = unsigned_len(num, find_base(chk_frmt));
 	oldprec = chk_frmt.precs;
-	chk_frmt = arrange_precs(chk_frmt, num, len);
 	if (chk_frmt.precs > len)
 		len = chk_frmt.precs;
 	u_front_padding(chk_frmt, num, len, oldprec);
