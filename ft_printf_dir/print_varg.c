@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   print_varg.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: macbookpro <macbookpro@student.codam.nl      +#+                     */
+/*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/24 23:59:45 by macbookpro     #+#    #+#                */
-/*   Updated: 2019/11/30 11:49:04 by ydag          ########   odam.nl         */
+/*   Created: 2019/12/03 12:03:40 by ydag           #+#    #+#                */
+/*   Updated: 2019/12/03 12:03:42 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

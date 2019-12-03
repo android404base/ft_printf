@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   search_prec.c                                      :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: macbookpro <macbookpro@student.codam.nl      +#+                     */
+/*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/26 23:07:08 by macbookpro     #+#    #+#                */
-/*   Updated: 2019/11/30 16:47:30 by ydag          ########   odam.nl         */
+/*   Created: 2019/12/03 12:04:24 by ydag           #+#    #+#                */
+/*   Updated: 2019/12/03 12:04:26 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

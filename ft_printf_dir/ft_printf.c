@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_printf.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: macbookpro <macbookpro@student.codam.nl      +#+                     */
+/*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/24 22:45:37 by macbookpro     #+#    #+#                */
-/*   Updated: 2019/12/03 11:22:52 by ydag          ########   odam.nl         */
+/*   Created: 2019/12/03 12:01:37 by ydag           #+#    #+#                */
+/*   Updated: 2019/12/03 12:01:41 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

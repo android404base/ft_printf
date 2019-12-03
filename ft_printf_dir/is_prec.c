@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   is_prec.c                                          :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: macbookpro <macbookpro@student.codam.nl      +#+                     */
+/*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/26 00:09:43 by macbookpro     #+#    #+#                */
-/*   Updated: 2019/11/30 16:24:37 by ydag          ########   odam.nl         */
+/*   Created: 2019/12/03 12:03:07 by ydag           #+#    #+#                */
+/*   Updated: 2019/12/03 12:03:08 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

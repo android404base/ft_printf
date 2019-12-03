@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   is_conv.c                                          :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: macbookpro <macbookpro@student.codam.nl      +#+                     */
+/*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/26 00:10:26 by macbookpro     #+#    #+#                */
-/*   Updated: 2019/11/30 16:24:14 by ydag          ########   odam.nl         */
+/*   Created: 2019/12/03 12:02:26 by ydag           #+#    #+#                */
+/*   Updated: 2019/12/03 12:02:28 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
