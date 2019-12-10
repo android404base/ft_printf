@@ -6,7 +6,7 @@
 /*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/12/03 12:01:55 by ydag           #+#    #+#                */
-/*   Updated: 2019/12/03 12:01:57 by ydag          ########   odam.nl         */
+/*   Updated: 2019/12/10 20:05:46 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,7 @@ void				unsigned_base(unsigned int n, int base, int up);
 void				u_front_padding(t_check chk_frmt, int num, int len, int op);
 void				back_padding(t_check chk_frmt, int len);
 void				front_padding(t_check chk_frmt, int num, int len);
+int					print_prehex(t_check fmt);
+int					is_uint(t_check fmt);
 
 #endif

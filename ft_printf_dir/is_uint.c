@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstsize.c                                       :+:    :+:            */
+/*   is_uint.c                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/11 14:23:11 by ydag           #+#    #+#                */
-/*   Updated: 2019/11/11 14:23:38 by ydag          ########   odam.nl         */
+/*   Created: 2019/12/10 19:15:28 by ydag           #+#    #+#                */
+/*   Updated: 2019/12/10 19:16:08 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int		ft_lstsize(t_list *lst)
+int		is_uint(t_check fmt)
 {
-	int		counter;
+	char	c;
 
-	counter = 0;
-	if (lst == NULL)
-		return (counter);
-	while (lst->next != NULL)
-	{
-		lst = lst->next;
-		counter++;
-	}
-	return (++counter);
+	c = fmt.conv_spc;
+	if (c == 'u' || c == 'x' || c == 'X')
+		return (1);
+	return (0);
 }

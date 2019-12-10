@@ -6,7 +6,7 @@
 /*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 16:14:37 by ydag           #+#    #+#                */
-/*   Updated: 2019/11/30 16:20:59 by ydag          ########   odam.nl         */
+/*   Updated: 2019/12/06 14:46:13 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ size_t			ft_strlcat(char *dst, const char *src, size_t size);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlen(const char *s);
 int				ft_strncmp(const char *str1, const char *str2, size_t n);
-char			*ft_strnstr(const char *big, const char *little, size_t len);
 char			*ft_strrchr(const char *s, int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
@@ -57,7 +56,6 @@ void			*ft_calloc(size_t num, size_t size);
 int				ft_strcmp(const char *s1, const char *s2);
 char			*ft_strcpy(char *dst, const char *src);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
-char			*ft_strjoin(char const *s1, char const *s2);
 char			**ft_free_all(char **s, int i);
 char			**ft_split(char const *s, char c);
 char			*ft_itoa(int n);
@@ -68,10 +66,8 @@ void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **alst, t_list *new);
-int				ft_lstsize(t_list *lst);
 t_list			*ft_lstlast(t_list *lst);
 char			*ft_strdup(const char *s);
-char			*ft_strtrim(char const *s1, char const *set);
 void			ft_lstadd_back(t_list **alst, t_list *new);
 void			ft_lstdelone(t_list *alst, void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
