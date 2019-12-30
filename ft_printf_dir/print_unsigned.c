@@ -6,17 +6,28 @@
 /*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/30 12:51:37 by ydag           #+#    #+#                */
-/*   Updated: 2019/12/10 20:05:58 by ydag          ########   odam.nl         */
+/*   Updated: 2019/12/20 15:37:11 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		print_unsigned(t_check chk_frmt, unsigned int num)
+static unsigned long long	typecast(t_check fmt, unsigned long long num)
+{
+	if (is_uint(fmt))
+		return ((unsigned int)num);
+	if (is_void(fmt))
+		return ((unsigned long long)num);
+	return ((unsigned long long)num);
+}
+
+int							print_unsigned(t_check chk_frmt,
+									unsigned long long num)
 {
 	int len;
 	int oldprec;
 
+	num = (typecast(chk_frmt, num));
 	len = unsigned_len(num, find_base(chk_frmt));
 	oldprec = chk_frmt.precs;
 	if (chk_frmt.precs > len)

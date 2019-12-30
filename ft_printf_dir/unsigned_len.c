@@ -6,13 +6,13 @@
 /*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/30 13:48:13 by ydag           #+#    #+#                */
-/*   Updated: 2019/11/30 13:51:22 by ydag          ########   odam.nl         */
+/*   Updated: 2019/12/16 12:53:35 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		unsigned_len(unsigned int num, int base)
+int		unsigned_len(unsigned long long num, int base)
 {
 	int		len;
 

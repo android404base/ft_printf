@@ -6,7 +6,7 @@
 /*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/30 13:26:21 by ydag           #+#    #+#                */
-/*   Updated: 2019/12/02 15:30:43 by ydag          ########   odam.nl         */
+/*   Updated: 2019/12/30 16:45:28 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,5 @@ int		len_of_chars(t_check chk_frmt, int num)
 		else
 			len = chk_frmt.field_width;
 	}
-	if (chk_frmt.precs == tmp)
-		len += 1;
 	return (len);
 }

@@ -6,7 +6,7 @@
 /*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/12/03 12:01:55 by ydag           #+#    #+#                */
-/*   Updated: 2019/12/10 20:05:46 by ydag          ########   odam.nl         */
+/*   Updated: 2019/12/16 16:01:47 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,16 +49,16 @@ int					is_string(t_check chk_frmt);
 int					is_unsigned(t_check chk_frmt);
 int					is_void(t_check chk_frmt);
 int					len_of_chars(t_check chk_frmt, int num);
-int					len_of_uchars(t_check chk, unsigned int num);
+int					len_of_uchars(t_check chk, unsigned long long num);
 int					print_char(t_check chk_frmt, unsigned int c);
 int					print_padding(char c, int size);
 int					print_signed(t_check chk_frmt, int num);
 int					print_string(t_check chk_frmt, char *str);
-int					print_unsigned(t_check chk_frmt, unsigned int num);
-int					unsigned_len(unsigned int num, int base);
+int					print_unsigned(t_check chk_frmt, unsigned long long num);
+int					unsigned_len(unsigned long long num, int base);
 int					find_base(t_check chk_frmt);
 int					find_case(t_check chk_frmt);
-void				unsigned_base(unsigned int n, int base, int up);
+void				unsigned_base(unsigned long long n, int base, int up);
 void				u_front_padding(t_check chk_frmt, int num, int len, int op);
 void				back_padding(t_check chk_frmt, int len);
 void				front_padding(t_check chk_frmt, int num, int len);

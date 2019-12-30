@@ -6,7 +6,7 @@
 /*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/12/03 12:01:37 by ydag           #+#    #+#                */
-/*   Updated: 2019/12/03 12:01:41 by ydag          ########   odam.nl         */
+/*   Updated: 2019/12/30 16:50:28 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int		ft_printf(const char *format, ...)
 
 	len = 0;
 	va_start(ap, format);
-	while (*format)
+	while (*format && len != -1)
 	{
 		if (*format == '%')
 		{

@@ -6,7 +6,7 @@
 /*   By: ydag <ydag@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/12/02 13:15:19 by ydag           #+#    #+#                */
-/*   Updated: 2019/12/10 19:57:30 by ydag          ########   odam.nl         */
+/*   Updated: 2019/12/30 16:45:10 by ydag          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 void	u_front_padding(t_check chk_frmt, int num, int len, int op)
 {
+	if (!(chk_frmt.conv_spc == 'p' && chk_frmt.field_width == len + 1))
+	{
+		if (num == 0 && chk_frmt.precs == 0 && chk_frmt.field_width != -1)
+			ft_putchar(' ');
+	}
 	if (!chk_frmt.flag_minus && (!chk_frmt.flag_zero || chk_frmt.precs != -1))
 	{
 		if (chk_frmt.conv_spc == 'p')
@@ -24,8 +29,6 @@ void	u_front_padding(t_check chk_frmt, int num, int len, int op)
 		else if (!(chk_frmt.flag_zero && op == -1))
 			print_padding(' ', (chk_frmt.field_width - len));
 	}
-	if (num == 0 && chk_frmt.precs == 0 && chk_frmt.field_width != -1)
-		ft_putchar('0');
 	if (!chk_frmt.flag_minus && chk_frmt.flag_zero && op == -1)
 	{
 		if (chk_frmt.conv_spc == 'p')
